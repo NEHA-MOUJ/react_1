@@ -26,9 +26,8 @@ jobs:
     -name: INSTALL NODE
       uses: actions/setup-node@v2-beta
         with:
-          node-version: '12'
-         run: npm install
-         run: npm test
+          node-version: 12
+         
       
        
      -name: GitHUB action for yarn
