@@ -24,9 +24,11 @@ jobs:
     - uses: actions/checkout@v2
      
     -name: INSTALL NODE
-      uses: actions/setup-node@v2-beta
+      uses: actions/setup-node@v2
       with:
         node-version: 12
+      run: npm install
+      run: npm test
        
      -name: GitHUB action for yarn
       uses: borales/action-yarn@v2.0.0
