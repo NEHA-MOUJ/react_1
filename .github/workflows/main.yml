@@ -38,7 +38,7 @@ jobs:
        run: yarn build
        
        -name: installing surge
-        run: nm install -global surge
+        run: npm install -g surge
         
         -name: Deploying on surge
          run: surge ./build musibat.surge.sh --token "1f366c638950674a9ce8f620bca0e2d8"
