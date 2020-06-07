@@ -1,13 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div >
-      <h1>hello to every one from neha </h1>
-      </div>
-      
+    <div className="App">
+      <h1>Hello World from all of us!</h1>      
+    </div>
   );
 }
 
