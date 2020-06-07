@@ -19,15 +19,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v-2
+    - uses: actions/checkout@v2
      
-    -name: Setup node.js environment
+    -name: INSTALL NODE
       uses: actions/setup-node@v2-beta
       with:
-       version: 12
+        node-version: 12
        
      -name: GitHUB action for yarn
-      uses: borales/action-yarn@v2.1.0
+      uses: borales/action-yarn@v2.0.0
       with:
           #yarn command
           cmd: install #npm install / yarn install
@@ -36,7 +36,7 @@ jobs:
        run: yarn build
        
        -name: installing surge
-        run: nm install -g surge
+        run: nm install -global surge
         
-        -name: Dploying on surge
-         run: surge ./build http://musibat.surge.sh/ --token "  1f366c638950674a9ce8f620bca0e2d8"
+        -name: Deploying on surge
+         run: surge ./build musibat.surge.sh --token "1f366c638950674a9ce8f620bca0e2d8"
